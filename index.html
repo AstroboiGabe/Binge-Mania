@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINGE MANIA (❁´◡`❁)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <main class="container">
+        <header>
+            <h1 class="glow-title">BINGE MANIA <span class="emoji">(❁´◡`❁)</span></h1>
+            <p class="subtitle">Discover your next obsession</p>
+        </header>
+
+        <section class="api-key-section">
+            <input type="password" id="apiKey" placeholder="Enter Gemini API Key" autocomplete="off">
+        </section>
+
+        <section class="filters-panel glass">
+            <div class="input-group">
+                <label for="type">Type</label>
+                <select id="type">
+                    <option value="Any">Any</option>
+                    <option value="Movie">Movie</option>
+                    <option value="TV Show">TV Show</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="language">Language</label>
+                <input type="text" id="language" value="Any" placeholder="e.g. English, Korean">
+            </div>
+
+            <div class="input-group">
+                <label for="year">Year</label>
+                <input type="text" id="year" value="Any" placeholder="e.g. 2023, 90s">
+            </div>
+
+            <div class="input-group">
+                <label for="rating">IMDB Rating</label>
+                <select id="rating">
+                    <option value="Any">Any</option>
+                    <option value="> 9.0">> 9.0 Masterpiece</option>
+                    <option value="> 8.0">> 8.0 Excellent</option>
+                    <option value="> 7.0">> 7.0 Good</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="genre">Genre</label>
+                <input type="text" id="genre" value="Any" placeholder="e.g. Sci-Fi, Romance">
+            </div>
+
+            <div class="input-group">
+                <label for="director">Director</label>
+                <input type="text" id="director" value="Any" placeholder="e.g. Nolan, Tarantino">
+            </div>
+        </section>
+
+        <div class="button-container">
+            <button id="amazeBtn" class="amaze-btn">
+                <span class="btn-text">Amaze me 🎦</span>
+                <span class="btn-loader" style="display: none;">Wait...</span>
+            </button>
+        </div>
+
+        <section id="resultContainer" class="result-container glass hidden">
+            <h2 id="resultTitle" class="result-title">Title Here</h2>
+            <div class="poster-wrapper">
+                <img id="resultPoster" src="" alt="Movie Poster" class="result-poster">
+                <div id="posterLoader" class="poster-loader hidden"></div>
+            </div>
+            <p id="resultDesc" class="result-desc">Description will appear here...</p>
+        </section>
+        
+        <div id="errorMessage" class="error-msg hidden"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
